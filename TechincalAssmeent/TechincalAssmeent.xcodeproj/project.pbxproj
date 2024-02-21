@@ -16,6 +16,8 @@
 		CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */; };
 		CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A72B86783C00378167 /* KeychainManager.swift */; };
 		CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A92B86785C00378167 /* KeychainItem.swift */; };
+		CE2B55AE2B8679B800378167 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55AD2B8679B800378167 /* HomeView.swift */; };
+		CE2B55B12B867A4200378167 /* UseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B02B867A4200378167 /* UseCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+TechincalAssmement.swift"; sourceTree = "<group>"; };
 		CE2B55A72B86783C00378167 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		CE2B55A92B86785C00378167 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		CE2B55AD2B8679B800378167 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE2B55B02B867A4200378167 /* UseCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		CE2B55882B8675CA00378167 /* TechincalAssmeent */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B55AF2B867A1900378167 /* Helpers */,
 				CE2B55A62B86782600378167 /* Security Layer */,
 				CE2B559D2B86760C00378167 /* Resources */,
 				CE2B559C2B8675FB00378167 /* Module */,
@@ -83,6 +88,7 @@
 		CE2B559C2B8675FB00378167 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B55AC2B8679AD00378167 /* Home */,
 				CE2B55A32B8676CB00378167 /* Login */,
 			);
 			path = Module;
@@ -120,6 +126,22 @@
 				CE2B55A92B86785C00378167 /* KeychainItem.swift */,
 			);
 			path = "Security Layer";
+			sourceTree = "<group>";
+		};
+		CE2B55AC2B8679AD00378167 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55AD2B8679B800378167 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE2B55AF2B867A1900378167 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55B02B867A4200378167 /* UseCredentials.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +217,10 @@
 				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
 				CE2B55932B8675CC00378167 /* Persistence.swift in Sources */,
 				CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */,
+				CE2B55B12B867A4200378167 /* UseCredentials.swift in Sources */,
 				CE2B55962B8675CC00378167 /* TechincalAssmeent.xcdatamodeld in Sources */,
 				CE2B559F2B86763600378167 /* LoginView.swift in Sources */,
+				CE2B55AE2B8679B800378167 /* HomeView.swift in Sources */,
 				CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */,
 				CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */,
 			);

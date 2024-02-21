@@ -60,7 +60,7 @@ struct LoginView: View {
                     .disabled(!enableLoginButton)
             
                 .fullScreenCover(isPresented: $isLoginSuccess, content: {
-//                    HomeView()
+                    HomeView()
                 })
             }
             .onAppear{
@@ -87,7 +87,7 @@ struct LoginView: View {
         do {
             try keychainItem.savePassword()
             isLoginSuccess = true
-//            UserManager.shared.loginUser(username: userName)
+            UseCredentials.shared.loginUser(username: userName)
         } catch {
             print(error)
         }
