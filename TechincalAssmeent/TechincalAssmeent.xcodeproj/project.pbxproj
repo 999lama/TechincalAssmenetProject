@@ -10,7 +10,6 @@
 		CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */; };
 		CE2B558E2B8675CC00378167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2B558D2B8675CC00378167 /* Assets.xcassets */; };
 		CE2B55912B8675CC00378167 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2B55902B8675CC00378167 /* Preview Assets.xcassets */; };
-		CE2B55932B8675CC00378167 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55922B8675CC00378167 /* Persistence.swift */; };
 		CE2B55962B8675CC00378167 /* TechincalAssmeent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */; };
 		CE2B559F2B86763600378167 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B559E2B86763600378167 /* LoginView.swift */; };
 		CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */; };
@@ -18,6 +17,15 @@
 		CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A92B86785C00378167 /* KeychainItem.swift */; };
 		CE2B55AE2B8679B800378167 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55AD2B8679B800378167 /* HomeView.swift */; };
 		CE2B55B12B867A4200378167 /* UseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B02B867A4200378167 /* UseCredentials.swift */; };
+		CE2B55B42B867BDE00378167 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B32B867BDE00378167 /* Constant.swift */; };
+		CE2B55B62B867C3400378167 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B52B867C3400378167 /* NetworkError.swift */; };
+		CE2B55B82B867C4700378167 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B72B867C4700378167 /* EndPoint.swift */; };
+		CE2B55BA2B867C6000378167 /* APIClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B92B867C6000378167 /* APIClientManager.swift */; };
+		CE2B55BD2B867CB400378167 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55BC2B867CB400378167 /* UserModel.swift */; };
+		CE2B55C02B867CD900378167 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55BF2B867CD900378167 /* CoreDataManager.swift */; };
+		CE2B55C32B867D5D00378167 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C22B867D5D00378167 /* ManagedUser.swift */; };
+		CE2B55C52B867E6700378167 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C42B867E6700378167 /* UserListView.swift */; };
+		CE2B55C72B867E8500378167 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C62B867E8500378167 /* UserListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +33,6 @@
 		CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechincalAssmeentApp.swift; sourceTree = "<group>"; };
 		CE2B558D2B8675CC00378167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2B55902B8675CC00378167 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE2B55922B8675CC00378167 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE2B55952B8675CC00378167 /* TechincalAssmeent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TechincalAssmeent.xcdatamodel; sourceTree = "<group>"; };
 		CE2B559E2B86763600378167 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+TechincalAssmement.swift"; sourceTree = "<group>"; };
@@ -33,6 +40,15 @@
 		CE2B55A92B86785C00378167 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		CE2B55AD2B8679B800378167 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE2B55B02B867A4200378167 /* UseCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCredentials.swift; sourceTree = "<group>"; };
+		CE2B55B32B867BDE00378167 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CE2B55B52B867C3400378167 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CE2B55B72B867C4700378167 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		CE2B55B92B867C6000378167 /* APIClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientManager.swift; sourceTree = "<group>"; };
+		CE2B55BC2B867CB400378167 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CE2B55BF2B867CD900378167 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CE2B55C22B867D5D00378167 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = "<group>"; };
+		CE2B55C42B867E6700378167 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		CE2B55C62B867E8500378167 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +81,13 @@
 		CE2B55882B8675CA00378167 /* TechincalAssmeent */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B559D2B86760C00378167 /* Resources */,
+				CE2B55BE2B867CCB00378167 /* Data Layer */,
+				CE2B55B22B867BA900378167 /* Network Layer */,
 				CE2B55AF2B867A1900378167 /* Helpers */,
 				CE2B55A62B86782600378167 /* Security Layer */,
-				CE2B559D2B86760C00378167 /* Resources */,
 				CE2B559C2B8675FB00378167 /* Module */,
 				CE2B55A02B86764B00378167 /* Extensions */,
-				CE2B55922B8675CC00378167 /* Persistence.swift */,
 				CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */,
 				CE2B558F2B8675CC00378167 /* Preview Content */,
 			);
@@ -88,6 +105,7 @@
 		CE2B559C2B8675FB00378167 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B55BB2B867CA500378167 /* User List */,
 				CE2B55AC2B8679AD00378167 /* Home */,
 				CE2B55A32B8676CB00378167 /* Login */,
 			);
@@ -142,6 +160,44 @@
 				CE2B55B02B867A4200378167 /* UseCredentials.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE2B55B22B867BA900378167 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55B32B867BDE00378167 /* Constant.swift */,
+				CE2B55B52B867C3400378167 /* NetworkError.swift */,
+				CE2B55B72B867C4700378167 /* EndPoint.swift */,
+				CE2B55B92B867C6000378167 /* APIClientManager.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		CE2B55BB2B867CA500378167 /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55BC2B867CB400378167 /* UserModel.swift */,
+				CE2B55C42B867E6700378167 /* UserListView.swift */,
+				CE2B55C62B867E8500378167 /* UserListViewModel.swift */,
+			);
+			path = "User List";
+			sourceTree = "<group>";
+		};
+		CE2B55BE2B867CCB00378167 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55C12B867D3900378167 /* Managed Object */,
+				CE2B55BF2B867CD900378167 /* CoreDataManager.swift */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		CE2B55C12B867D3900378167 /* Managed Object */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55C22B867D5D00378167 /* ManagedUser.swift */,
+			);
+			path = "Managed Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,14 +270,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B55BA2B867C6000378167 /* APIClientManager.swift in Sources */,
 				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
-				CE2B55932B8675CC00378167 /* Persistence.swift in Sources */,
+				CE2B55C02B867CD900378167 /* CoreDataManager.swift in Sources */,
+				CE2B55C52B867E6700378167 /* UserListView.swift in Sources */,
 				CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */,
+				CE2B55C32B867D5D00378167 /* ManagedUser.swift in Sources */,
+				CE2B55C72B867E8500378167 /* UserListViewModel.swift in Sources */,
 				CE2B55B12B867A4200378167 /* UseCredentials.swift in Sources */,
 				CE2B55962B8675CC00378167 /* TechincalAssmeent.xcdatamodeld in Sources */,
 				CE2B559F2B86763600378167 /* LoginView.swift in Sources */,
+				CE2B55B82B867C4700378167 /* EndPoint.swift in Sources */,
+				CE2B55BD2B867CB400378167 /* UserModel.swift in Sources */,
 				CE2B55AE2B8679B800378167 /* HomeView.swift in Sources */,
 				CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */,
+				CE2B55B42B867BDE00378167 /* Constant.swift in Sources */,
+				CE2B55B62B867C3400378167 /* NetworkError.swift in Sources */,
 				CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

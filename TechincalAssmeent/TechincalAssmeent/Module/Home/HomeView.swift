@@ -44,6 +44,13 @@ struct HomeView: View {
                     }
                  
                 }
+       
+                .background(
+                NavigationLink(
+                    "", destination: UserListView(),
+                   isActive: $showUserList
+                 )
+                )
             
                 .navigationBarTitleDisplayMode(.large)
                 .toolbarBackground(
