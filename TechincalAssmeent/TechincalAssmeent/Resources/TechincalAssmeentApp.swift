@@ -15,6 +15,9 @@ struct TechincalAssmeentApp: App {
         WindowGroup {
             LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    String.printApplicationDocumentsDirectory()
+                }
         }
     }
 }

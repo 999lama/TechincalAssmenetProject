@@ -28,6 +28,7 @@
 		CE2B55C72B867E8500378167 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C62B867E8500378167 /* UserListViewModel.swift */; };
 		CEA343D02B86843C00CEDD80 /* WebSocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */; };
 		CEA343D52B86849B00CEDD80 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343D42B86849B00CEDD80 /* MessageView.swift */; };
+		CEA343D72B868BF000CEDD80 /* String+TechincalAssment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343D62B868BF000CEDD80 /* String+TechincalAssment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		CE2B55C62B867E8500378167 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewModel.swift; sourceTree = "<group>"; };
 		CEA343D42B86849B00CEDD80 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		CEA343D62B868BF000CEDD80 /* String+TechincalAssment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TechincalAssment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */,
+				CEA343D62B868BF000CEDD80 /* String+TechincalAssment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA343D72B868BF000CEDD80 /* String+TechincalAssment.swift in Sources */,
 				CEA343D02B86843C00CEDD80 /* WebSocketViewModel.swift in Sources */,
 				CE2B55BA2B867C6000378167 /* APIClientManager.swift in Sources */,
 				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
