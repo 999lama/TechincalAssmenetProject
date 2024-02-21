@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  UserListModel.swift
 //  TechincalAssmeent
 //
 //  Created by Lama Albadri on 20/02/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserList: Decodable {
+struct UserListModel: Decodable {
     let data: [ManagedUser]
 }
 
