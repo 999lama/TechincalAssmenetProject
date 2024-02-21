@@ -26,6 +26,8 @@
 		CE2B55C32B867D5D00378167 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C22B867D5D00378167 /* ManagedUser.swift */; };
 		CE2B55C52B867E6700378167 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C42B867E6700378167 /* UserListView.swift */; };
 		CE2B55C72B867E8500378167 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C62B867E8500378167 /* UserListViewModel.swift */; };
+		CEA343D02B86843C00CEDD80 /* WebSocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */; };
+		CEA343D52B86849B00CEDD80 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343D42B86849B00CEDD80 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		CE2B55C22B867D5D00378167 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = "<group>"; };
 		CE2B55C42B867E6700378167 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		CE2B55C62B867E8500378167 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewModel.swift; sourceTree = "<group>"; };
+		CEA343D42B86849B00CEDD80 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,6 @@
 				CEA343CE2B8683C000CEDD80 /* Model */,
 				CEA343CD2B8683B700CEDD80 /* View */,
 				CEA343CC2B8683AD00CEDD80 /* ViewModel */,
-				CE2B55BB2B867CA500378167 /* User List */,
-				CE2B55AC2B8679AD00378167 /* Home */,
-				CE2B55A32B8676CB00378167 /* Login */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -133,14 +134,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CE2B55A32B8676CB00378167 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CE2B559E2B86763600378167 /* LoginView.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		CE2B55A62B86782600378167 /* Security Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,14 +141,6 @@
 				CE2B55A92B86785C00378167 /* KeychainItem.swift */,
 			);
 			path = "Security Layer";
-			sourceTree = "<group>";
-		};
-		CE2B55AC2B8679AD00378167 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				CE2B55AD2B8679B800378167 /* HomeView.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		CE2B55AF2B867A1900378167 /* Helpers */ = {
@@ -174,13 +159,6 @@
 				CE2B55B92B867C6000378167 /* APIClientManager.swift */,
 			);
 			path = "Network Layer";
-			sourceTree = "<group>";
-		};
-		CE2B55BB2B867CA500378167 /* User List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "User List";
 			sourceTree = "<group>";
 		};
 		CE2B55BE2B867CCB00378167 /* Data Layer */ = {
@@ -211,7 +189,10 @@
 		CEA343CD2B8683B700CEDD80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEA343D32B86849300CEDD80 /* Sub views */,
 				CE2B55C42B867E6700378167 /* UserListView.swift */,
+				CE2B55AD2B8679B800378167 /* HomeView.swift */,
+				CE2B559E2B86763600378167 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,8 +201,17 @@
 			isa = PBXGroup;
 			children = (
 				CE2B55BC2B867CB400378167 /* UserListModel.swift */,
+				CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEA343D32B86849300CEDD80 /* Sub views */ = {
+			isa = PBXGroup;
+			children = (
+				CEA343D42B86849B00CEDD80 /* MessageView.swift */,
+			);
+			path = "Sub views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA343D02B86843C00CEDD80 /* WebSocketViewModel.swift in Sources */,
 				CE2B55BA2B867C6000378167 /* APIClientManager.swift in Sources */,
 				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
 				CE2B55C02B867CD900378167 /* CoreDataManager.swift in Sources */,
+				CEA343D52B86849B00CEDD80 /* MessageView.swift in Sources */,
 				CE2B55C52B867E6700378167 /* UserListView.swift in Sources */,
 				CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */,
 				CE2B55C32B867D5D00378167 /* ManagedUser.swift in Sources */,
