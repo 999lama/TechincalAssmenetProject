@@ -11,7 +11,7 @@ import Foundation
 struct KeychainItem: KeychainStorable {
     
    
-    let service: String
+    let service: String = Constant.service
     let account: String
     let password: String
     

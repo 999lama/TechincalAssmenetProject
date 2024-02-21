@@ -15,7 +15,7 @@ struct LoginView: View {
     @State var isLoginSuccess = false
     @State var enableLoginButton = false
     @State var showPopUp = false
-
+   
     
     var body: some View {
     
@@ -82,7 +82,7 @@ struct LoginView: View {
     }
  
     func savePassword() {
-        let keychainItem = KeychainItem(service: "TechincalAssmeent.com", account: userName, password: password)
+        let keychainItem = KeychainItem(account: userName, password: password)
         
         do {
             try keychainItem.savePassword()
@@ -90,21 +90,6 @@ struct LoginView: View {
             UseCredentials.shared.loginUser(username: userName)
         } catch {
             print(error)
-        }
-    }
-    
-    func doTheJob() {
-        Task {
-            let keychainItem = KeychainItem(service: "YourAppService", account: "user@example.com", password: "securePassword")
-            
-            do {
-                try keychainItem.savePassword()
-                let loadedPassword = try keychainItem.loadPassword()
-                try keychainItem.deletePassword()
-                print("Loaded password \(loadedPassword)")
-            } catch {
-                print(error)
-            }
         }
     }
     
