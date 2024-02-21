@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */; };
-		CE2B558C2B8675CA00378167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B558B2B8675CA00378167 /* ContentView.swift */; };
 		CE2B558E2B8675CC00378167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2B558D2B8675CC00378167 /* Assets.xcassets */; };
 		CE2B55912B8675CC00378167 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2B55902B8675CC00378167 /* Preview Assets.xcassets */; };
 		CE2B55932B8675CC00378167 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55922B8675CC00378167 /* Persistence.swift */; };
 		CE2B55962B8675CC00378167 /* TechincalAssmeent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */; };
+		CE2B559F2B86763600378167 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B559E2B86763600378167 /* LoginView.swift */; };
+		CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */; };
+		CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A72B86783C00378167 /* KeychainManager.swift */; };
+		CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A92B86785C00378167 /* KeychainItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE2B55862B8675CA00378167 /* TechincalAssmeent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechincalAssmeent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechincalAssmeentApp.swift; sourceTree = "<group>"; };
-		CE2B558B2B8675CA00378167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE2B558D2B8675CC00378167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2B55902B8675CC00378167 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE2B55922B8675CC00378167 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE2B55952B8675CC00378167 /* TechincalAssmeent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TechincalAssmeent.xcdatamodel; sourceTree = "<group>"; };
+		CE2B559E2B86763600378167 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+TechincalAssmement.swift"; sourceTree = "<group>"; };
+		CE2B55A72B86783C00378167 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		CE2B55A92B86785C00378167 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +61,10 @@
 		CE2B55882B8675CA00378167 /* TechincalAssmeent */ = {
 			isa = PBXGroup;
 			children = (
-				CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */,
-				CE2B558B2B8675CA00378167 /* ContentView.swift */,
-				CE2B558D2B8675CC00378167 /* Assets.xcassets */,
+				CE2B55A62B86782600378167 /* Security Layer */,
+				CE2B559D2B86760C00378167 /* Resources */,
+				CE2B559C2B8675FB00378167 /* Module */,
+				CE2B55A02B86764B00378167 /* Extensions */,
 				CE2B55922B8675CC00378167 /* Persistence.swift */,
 				CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */,
 				CE2B558F2B8675CC00378167 /* Preview Content */,
@@ -71,6 +78,48 @@
 				CE2B55902B8675CC00378167 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE2B559C2B8675FB00378167 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55A32B8676CB00378167 /* Login */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		CE2B559D2B86760C00378167 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55892B8675CA00378167 /* TechincalAssmeentApp.swift */,
+				CE2B558D2B8675CC00378167 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE2B55A02B86764B00378167 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55A12B86766500378167 /* Color+TechincalAssmement.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE2B55A32B8676CB00378167 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B559E2B86763600378167 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE2B55A62B86782600378167 /* Security Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55A72B86783C00378167 /* KeychainManager.swift */,
+				CE2B55A92B86785C00378167 /* KeychainItem.swift */,
+			);
+			path = "Security Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
 				CE2B55932B8675CC00378167 /* Persistence.swift in Sources */,
+				CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */,
 				CE2B55962B8675CC00378167 /* TechincalAssmeent.xcdatamodeld in Sources */,
-				CE2B558C2B8675CA00378167 /* ContentView.swift in Sources */,
+				CE2B559F2B86763600378167 /* LoginView.swift in Sources */,
+				CE2B55A22B86766500378167 /* Color+TechincalAssmement.swift in Sources */,
 				CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
