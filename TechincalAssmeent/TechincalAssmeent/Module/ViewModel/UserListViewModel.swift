@@ -39,7 +39,7 @@ class UserListViewModel: ObservableObject {
                 self.isError = false
                 print("Received data: \(data)")
             })
-            .store(in: &cancelable) // Make sure to store the cancellable to avoid premature deallocation
+            .store(in: &cancelable)
         
     }
     
