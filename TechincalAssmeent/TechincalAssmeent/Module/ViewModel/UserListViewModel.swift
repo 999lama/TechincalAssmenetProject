@@ -31,7 +31,7 @@ class UserListViewModel: ObservableObject {
                     self?.isError = true
                     self?.isLoading = false
                 }
-            }, receiveValue: { (data: UserList) in
+            }, receiveValue: { (data: UserListModel) in
                 for user in data.data {
                     self.userList.append(UserModel(id: Int(user.id_ ?? "") ?? Int(), name: user.name ?? "", email: user.email ?? "", gender: user.gender  ?? "", status: user.status  ?? ""))
                 }
@@ -39,7 +39,7 @@ class UserListViewModel: ObservableObject {
                 self.isError = false
                 print("Received data: \(data)")
             })
-            .store(in: &cancelable) // Make sure to store the cancellable to avoid premature deallocation
+            .store(in: &cancelable)
         
     }
     

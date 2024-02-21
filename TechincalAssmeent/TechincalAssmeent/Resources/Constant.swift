@@ -10,5 +10,5 @@ import Foundation
 
 struct Constant {
     static let baseURL = "https://gorest.co.in/public-api"
-    
+    static let service =  "TechincalAssmeent.com"
 }
