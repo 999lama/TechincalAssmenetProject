@@ -18,6 +18,7 @@
 		CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55A92B86785C00378167 /* KeychainItem.swift */; };
 		CE2B55AE2B8679B800378167 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55AD2B8679B800378167 /* HomeView.swift */; };
 		CE2B55B12B867A4200378167 /* UseCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55B02B867A4200378167 /* UseCredentials.swift */; };
+		CE2B55CA2B86827C00378167 /* WebsocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B55C92B86827C00378167 /* WebsocketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CE2B55A92B86785C00378167 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		CE2B55AD2B8679B800378167 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE2B55B02B867A4200378167 /* UseCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCredentials.swift; sourceTree = "<group>"; };
+		CE2B55C92B86827C00378167 /* WebsocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		CE2B559C2B8675FB00378167 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B55C82B86826200378167 /* ViewModel */,
 				CE2B55AC2B8679AD00378167 /* Home */,
 				CE2B55A32B8676CB00378167 /* Login */,
 			);
@@ -142,6 +145,14 @@
 				CE2B55B02B867A4200378167 /* UseCredentials.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE2B55C82B86826200378167 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B55C92B86827C00378167 /* WebsocketViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B55CA2B86827C00378167 /* WebsocketViewModel.swift in Sources */,
 				CE2B55AA2B86785C00378167 /* KeychainItem.swift in Sources */,
 				CE2B55932B8675CC00378167 /* Persistence.swift in Sources */,
 				CE2B55A82B86783C00378167 /* KeychainManager.swift in Sources */,
