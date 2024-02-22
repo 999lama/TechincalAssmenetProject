@@ -96,7 +96,6 @@
 				CE2B55A62B86782600378167 /* Security Layer */,
 				CE2B559C2B8675FB00378167 /* Module */,
 				CE2B55A02B86764B00378167 /* Extensions */,
-				CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */,
 				CE2B558F2B8675CC00378167 /* Preview Content */,
 			);
 			path = TechincalAssmeent;
@@ -169,6 +168,7 @@
 		CE2B55BE2B867CCB00378167 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B55942B8675CC00378167 /* TechincalAssmeent.xcdatamodeld */,
 				CE2B55C12B867D3900378167 /* Managed Object */,
 				CE2B55BF2B867CD900378167 /* CoreDataManager.swift */,
 			);
