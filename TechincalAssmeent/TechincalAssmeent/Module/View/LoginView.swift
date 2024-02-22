@@ -8,14 +8,14 @@
 import SwiftUI
 
 
-struct LoginView: View {
+struct LoginView <ViewModel>: View  where ViewModel: LoginViewModelBinding & LoginViewModelCommand {
     
     @State var userName: String = ""
     @State var password: String = ""
-    @State var isLoginSuccess = false
     @State var enableLoginButton = false
     @State var showPopUp = false
    
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
     
@@ -59,8 +59,8 @@ struct LoginView: View {
                     })
                     .disabled(!enableLoginButton)
             
-                .fullScreenCover(isPresented: $isLoginSuccess, content: {
-                    HomeView()
+                    .fullScreenCover(isPresented: $viewModel.isLoginSuccess, content: {
+                    HomeView(viewModel: SendMessageViewModel())
                 })
             }
             .onAppear{
@@ -78,24 +78,11 @@ struct LoginView: View {
             print("Error please enter a password or username")
             return
         }
-        savePassword()
+        viewModel.savePasswordToKeychain(with: userName, and: password)
     }
  
-    func savePassword() {
-        let keychainItem = KeychainItem(account: userName, password: password)
-        
-        do {
-            try keychainItem.savePassword()
-            isLoginSuccess = true
-            UseCredentials.shared.loginUser(username: userName)
-        } catch {
-            print(error)
-        }
-    }
+
     
 }
 
-#Preview {
-    LoginView()
-}
 

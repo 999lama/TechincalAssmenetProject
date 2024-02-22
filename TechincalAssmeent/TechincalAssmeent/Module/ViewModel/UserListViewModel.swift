@@ -10,20 +10,34 @@ import Combine
 import CoreData
 import SwiftUI
 
-class UserListViewModel: ObservableObject {
-    
+protocol UserListViewModelBinding: ObservableObject {
+    var userList: [UserModel] { get set }
+    var isLoading: Bool { get set }
+    var isError: Bool { get set }
+    var errorMessage: String { get set }
+}
+
+protocol UserListViewModelCommand: ObservableObject {
+    func fetchUserList()
+}
+
+
+
+class UserListViewModel: UserListViewModelBinding {
+    @Published var errorMessage: String = ""
     @Published var userList: [UserModel] = []
     @Published var isLoading = true
     @Published var isError = false
     var cancelable: Set<AnyCancellable> = []
     @FetchRequest(sortDescriptors: []) var userManagedList: FetchedResults<ManagedUser>
     
+  
     
+ 
+
     
-    init() {
-        fetchUserList()
-    }
-    
+}
+extension UserListViewModel: UserListViewModelCommand {
     func fetchUserList() {
 
         if !userManagedList.isEmpty {
@@ -38,6 +52,7 @@ class UserListViewModel: ObservableObject {
                         break
                     case .failure(let error):
                         print("Error: \(error)")
+                        self?.errorMessage = error.localizedDescription
                         self?.isError = true
                         self?.isLoading = false
                     }
@@ -54,6 +69,4 @@ class UserListViewModel: ObservableObject {
         }
     
     }
-
-    
 }

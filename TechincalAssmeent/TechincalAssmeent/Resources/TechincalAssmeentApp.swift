@@ -13,7 +13,7 @@ struct TechincalAssmeentApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            LoginView(viewModel: LoginViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onAppear {
                     String.printApplicationDocumentsDirectory()

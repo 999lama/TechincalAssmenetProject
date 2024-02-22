@@ -8,7 +8,19 @@
 import Foundation
 import Combine
 
-class SendMessageViewModel: ObservableObject {
+protocol SendMessageViewModelBinding: ObservableObject {
+    var recivesMessages: [String] { get set }
+    var isAlertPresented: Bool { get set }
+}
+
+protocol SendMessageViewModelCommand: ObservableObject {
+    func createWebSocketConnection()
+    func disconnectWebSocket()
+    func sendMessage(_ messageToSend: String)
+    func receiveMessages()
+}
+
+class SendMessageViewModel: SendMessageViewModelBinding {
     @Published var recivesMessages: [String] = []
     @Published var isAlertPresented: Bool = false
 
@@ -16,6 +28,12 @@ class SendMessageViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
 
     init() { }
+    
+
+}
+
+
+extension SendMessageViewModel: SendMessageViewModelCommand {
     
     func createWebSocketConnection() {
         guard let url = URL(string: "wss://echo.websocket.org") else {
@@ -76,5 +94,4 @@ class SendMessageViewModel: ObservableObject {
         }
     }
     
-
 }

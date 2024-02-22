@@ -8,10 +8,9 @@
 import SwiftUI
 import CoreData
 
-struct UserListView: View {
+struct UserListView <ViewModel>: View where ViewModel: UserListViewModelBinding & UserListViewModelCommand {
     
-    @Environment(\.managedObjectContext) private var viewContext
-    @ObservedObject var viewModel: UserListViewModel = UserListViewModel()
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         
@@ -21,7 +20,7 @@ struct UserListView: View {
                     .tint(Color.primaryColor)
                     .frame(width: 200, height: 200)
             } else if !viewModel.isLoading && viewModel.isError  {
-                Text("Failed to load the data")
+                Text(viewModel.errorMessage)
                 Button(action: {
                     DispatchQueue.main.async {
                         viewModel.fetchUserList()
@@ -62,12 +61,13 @@ struct UserListView: View {
                           Color.primaryColor,
                           for: .navigationBar)
                       .toolbarBackground(.visible, for: .navigationBar)
+                      .onAppear(perform: {
+                          viewModel.fetchUserList()
+                      })
         
     }
     
 }
 
 
-#Preview {
-    UserListView()
-}
+

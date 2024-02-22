@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeView<SendMessageViewModel>: View where SendMessageViewModel: SendMessageViewModelBinding & SendMessageViewModelCommand {
     
     @State private var showUserList = false
     @State private var connectToWebSocket = false
-    @StateObject private var sendMessageViewModel = SendMessageViewModel()
+    @StateObject var viewModel: SendMessageViewModel
     @State private var messageToSend: String = ""
     
     var body: some View {
@@ -46,7 +46,7 @@ struct HomeView: View {
        
                 .background(
                 NavigationLink(
-                    "", destination: UserListView(),
+                    "", destination: UserListView(viewModel: UserListViewModel()),
                    isActive: $showUserList
                  )
                 )
@@ -68,7 +68,7 @@ struct HomeView: View {
                 .foregroundStyle(Color.gray)
             Button(action: {
                 connectToWebSocket = true
-                sendMessageViewModel.createWebSocketConnection()
+                viewModel.createWebSocketConnection()
             }, label: {
                 Text("Connect")
                     .foregroundStyle(Color.backgroundColor)
@@ -87,7 +87,7 @@ struct HomeView: View {
                 Text("Diconnect from webSocket")
                 Button(action: {
                     connectToWebSocket = false
-                    sendMessageViewModel.disconnectWebSocket()
+                    viewModel.disconnectWebSocket()
                 }, label: {
                     Text("Diconnect")
                         .bold()
@@ -100,7 +100,7 @@ struct HomeView: View {
             }
             ScrollView {
                 VStack(spacing: 10) {
-                    ForEach(sendMessageViewModel.recivesMessages.dropFirst(), id: \.self) { message in
+                    ForEach(viewModel.recivesMessages.dropFirst(), id: \.self) { message in
                         MessageView(contentMessage: message, isCurrentUser: true)
                         MessageView(contentMessage: message, isCurrentUser: false)
                         
@@ -116,7 +116,7 @@ struct HomeView: View {
                     .padding(8)
                 
                 Button(action: {
-                    sendMessageViewModel.sendMessage(messageToSend)
+                    viewModel.sendMessage(messageToSend)
                 }, label: {
                     Image(systemName: "paperplane.fill")
                         .tint(Color.primaryColor)
@@ -125,7 +125,7 @@ struct HomeView: View {
             }
             .background(Color.white)
             .padding()
-            .alert(isPresented: $sendMessageViewModel.isAlertPresented) {
+            .alert(isPresented: $viewModel.isAlertPresented) {
                 Alert(title: Text("Message Sent"), message: Text("\(messageToSend)"), dismissButton: .default(Text("Dismiss")))
             }
         }
@@ -136,6 +136,4 @@ struct HomeView: View {
 
 }
 
-#Preview {
-    HomeView()
-}
+

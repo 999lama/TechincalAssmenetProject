@@ -29,6 +29,7 @@
 		CEA343D02B86843C00CEDD80 /* WebSocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */; };
 		CEA343D52B86849B00CEDD80 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343D42B86849B00CEDD80 /* MessageView.swift */; };
 		CEA343D72B868BF000CEDD80 /* String+TechincalAssment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343D62B868BF000CEDD80 /* String+TechincalAssment.swift */; };
+		CEA343DD2B878F7900CEDD80 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA343DC2B878F7900CEDD80 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewModel.swift; sourceTree = "<group>"; };
 		CEA343D42B86849B00CEDD80 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		CEA343D62B868BF000CEDD80 /* String+TechincalAssment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TechincalAssment.swift"; sourceTree = "<group>"; };
+		CEA343DC2B878F7900CEDD80 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,8 @@
 		CEA343CC2B8683AD00CEDD80 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */,
+				CEA343DC2B878F7900CEDD80 /* LoginViewModel.swift */,
 				CE2B55C62B867E8500378167 /* UserListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -204,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2B55BC2B867CB400378167 /* UserListModel.swift */,
-				CEA343CF2B86843C00CEDD80 /* WebSocketViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				CE2B55B42B867BDE00378167 /* Constant.swift in Sources */,
 				CE2B55B62B867C3400378167 /* NetworkError.swift in Sources */,
 				CE2B558A2B8675CA00378167 /* TechincalAssmeentApp.swift in Sources */,
+				CEA343DD2B878F7900CEDD80 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
