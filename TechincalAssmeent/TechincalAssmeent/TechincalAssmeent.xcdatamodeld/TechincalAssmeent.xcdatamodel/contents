@@ -6,5 +6,10 @@
         <attribute name="id_" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>

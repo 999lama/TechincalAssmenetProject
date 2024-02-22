@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct UserListView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var viewModel: UserListViewModel = UserListViewModel()
-    
     
     var body: some View {
         
@@ -23,7 +23,9 @@ struct UserListView: View {
             } else if !viewModel.isLoading && viewModel.isError  {
                 Text("Failed to load the data")
                 Button(action: {
-                    viewModel.getUsers()
+                    DispatchQueue.main.async {
+                        viewModel.fetchUserList()
+                    }
                 }, label: {
                     Text("Retry")
                         .foregroundStyle(Color.primaryColor)
@@ -60,9 +62,6 @@ struct UserListView: View {
                           Color.primaryColor,
                           for: .navigationBar)
                       .toolbarBackground(.visible, for: .navigationBar)
-            .onAppear {
-                viewModel.getUsers()
-            }
         
     }
     

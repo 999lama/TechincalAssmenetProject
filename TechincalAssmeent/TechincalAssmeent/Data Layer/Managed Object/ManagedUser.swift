@@ -28,7 +28,8 @@ class ManagedUser: NSManagedObject,  Decodable {
         self.gender = try? container.decode(String.self, forKey: .gender)
         self.status = try? container.decode(String.self, forKey: .status)
         
-        CoreDataManager.shared.saveContext()
+            CoreDataManager.shared.saveContext()
+        
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -43,6 +44,8 @@ class ManagedUser: NSManagedObject,  Decodable {
     enum CodingKeys: String, CodingKey {
         case name, id, email, gender, status
     }
+    
+
 }
 
 
